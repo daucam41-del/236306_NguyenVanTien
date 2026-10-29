@@ -1,16 +1,61 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Frontend - Hệ thống quản lý món ăn
 
-Currently, two official plugins are available:
+## 1. Công nghệ
+- React
+- Vite
+- Nginx
+- Docker
+- Docker Hub
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 2. Docker Image
+https://hub.docker.com/r/nguyenvantien236306/236306-nguyenvantien-frontend
 
-## React Compiler
+Image:
+docker.io/nguyenvantien236306/236306-nguyenvantien-frontend:1.0
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 3. Build Docker Image
+Chạy tại thư mục gốc dự án:
 
-## Expanding the ESLint configuration
+```bash
+docker build -t nguyenvantien236306/236306-nguyenvantien-frontend:1.0 ./frontend
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 4. Chạy container
+
+```bash
+docker run -d \
+  --name food-frontend \
+  -p 8080:80 \
+  nguyenvantien236306/236306-nguyenvantien-frontend:1.0
+```
+
+Mở website tại:
+http://localhost:8080
+
+## 5. Kiểm tra container
+
+```bash
+docker ps
+docker logs food-frontend
+```
+
+## 6. Dừng và xóa container
+
+```bash
+docker stop food-frontend
+docker rm food-frontend
+```
+
+## 7. Push image lên Docker Hub
+
+```bash
+docker login -u nguyenvantien236306
+docker push nguyenvantien236306/236306-nguyenvantien-frontend:1.0
+docker push nguyenvantien236306/236306-nguyenvantien-frontend:latest
+```
+
+## 8. Lưu ý
+- Frontend được build bằng Vite và phục vụ bằng Nginx.
+- URL Backend cần được cấu hình phù hợp khi triển khai.
+- Không đưa thông tin bí mật vào Docker image.
