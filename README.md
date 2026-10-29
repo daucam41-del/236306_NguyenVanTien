@@ -30,7 +30,7 @@
 Hướng dẫn chi tiết sẽ được cập nhật khi hoàn thành các phần backend, frontend và Docker.
 
 ## 6. Đường dẫn tài nguyên
-- GitHub: https://github.com/USERNAME/236306_NguyenVanTien
+- GitHub: https://github.com/daucam41-del/236306_NguyenVanTien
 - Docker Backend: Cập nhật sau
 - Docker Frontend: Cập nhật sau
 - Render Frontend: Cập nhật sau
