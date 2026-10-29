@@ -32,7 +32,7 @@ Hướng dẫn chi tiết sẽ được cập nhật khi hoàn thành các phầ
 ## 6. Đường dẫn tài nguyên
 - GitHub: https://github.com/daucam41-del/236306_NguyenVanTien
 - Docker Backend: Cập nhật sau
-- Docker Frontend: Cập nhật sau
+- Docker Frontend: https://hub.docker.com/r/nguyenvantien236306/236306-nguyenvantien-frontend
 - Render Frontend: Cập nhật sau
 - Render Backend API: Cập nhật sau
-- MongoDB Atlas: Database 236306_NguyenVanTien
+- MongoDB Atlas: Database `236306_NguyenVanTien`
